@@ -7,6 +7,7 @@ package com.frozenbloo.frostlibrary.string.formatting.fontinfo;
 
 public enum DefaultFontInfo{
 
+    // Define each character with its corresponding length in pixels
     A('A', 5),
     a('a', 5),
     B('B', 5),
@@ -102,32 +103,66 @@ public enum DefaultFontInfo{
     PERIOD('.', 1),
     COMMA(',', 1),
     SPACE(' ', 3),
+    // Define a default character with a length of 4 pixels
     DEFAULT('a', 4);
 
     private char character;
     private int length;
 
+    /**
+     * Constructor for DefaultFontInfo.
+     *
+     * @param character the character
+     * @param length    the length in pixels
+     */
     DefaultFontInfo(char character, int length) {
         this.character = character;
         this.length = length;
     }
 
-    public char getCharacter(){
+    /**
+     * Returns the character.
+     *
+     * @return the character
+     */
+    public char getCharacter() {
         return this.character;
     }
 
-    public int getLength(){
+    /**
+     * Returns the length in pixels.
+     *
+     * @return the length in pixels
+     */
+    public int getLength() {
         return this.length;
     }
 
-    public int getBoldLength(){
-        if(this == DefaultFontInfo.SPACE) return this.getLength();
+    /**
+     * Returns the length in pixels if the font is bold (by adding 1 to the length).
+     * Spaces are the only exception since they don't have a bold version.
+     *
+     * @return the bold length in pixels
+     */
+    public int getBoldLength() {
+        if (this == DefaultFontInfo.SPACE) {
+            return this.getLength();
+        }
         return this.length + 1;
     }
 
-    public static DefaultFontInfo getDefaultFontInfo(char c){
-        for(DefaultFontInfo dFI : DefaultFontInfo.values()){
-            if(dFI.getCharacter() == c) return dFI;
+    /**
+     * Returns the DefaultFontInfo enum for the given character.
+     * If the character is not found, returns the default character.
+     *
+     * @param c the character
+     * @return the DefaultFontInfo enum for the character
+     */
+    public static DefaultFontInfo getDefaultFontInfo(char c) {
+        for (DefaultFontInfo dFI : DefaultFontInfo.values()) {
+            if (dFI.getCharacter() == c) {
+                return dFI;
+            }
         }
         return DefaultFontInfo.DEFAULT;
     }
