@@ -42,7 +42,7 @@ public abstract class FrostCommand extends BukkitCommand {
             CommandMap map = (CommandMap) field.get(Bukkit.getServer());
             map.register(command, this);
         } catch (NoSuchFieldException | IllegalAccessException e) {
-            e.printStackTrace();
+            Bukkit.getLogger().severe(e.getMessage());
         }
     }
 
