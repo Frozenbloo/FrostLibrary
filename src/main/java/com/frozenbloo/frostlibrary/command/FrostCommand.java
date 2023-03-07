@@ -10,7 +10,7 @@ import java.lang.reflect.Field;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.frozenbloo.frostlibrary.string.colour.StringColour.HexColour;
+import static com.frozenbloo.frostlibrary.player.string.colour.StringColour.HexColour;
 
 /**
  * A custom command class that extends the BukkitCommand class and provides some additional functionality.
@@ -32,7 +32,7 @@ public abstract class FrostCommand extends BukkitCommand {
         // Set the command's aliases, description, permission, and permissionMsg
         this.setAliases(Arrays.asList(aliases));
         this.setDescription(HexColour(description));
-        this.setPermission(HexColour(permission));
+        this.setPermission(permission);
         this.setPermissionMessage(HexColour(permissionMsg));
 
         // Register the command with the server's CommandMap using reflection

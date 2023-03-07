@@ -1,4 +1,4 @@
-package com.frozenbloo.frostlibrary.string.colour;
+package com.frozenbloo.frostlibrary.player.string.colour;
 
 import net.md_5.bungee.api.ChatColor;
 

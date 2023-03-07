@@ -1,4 +1,4 @@
-package com.frozenbloo.frostlibrary.string.formatting.fontinfo;
+package com.frozenbloo.frostlibrary.player.string.formatting.fontinfo;
 
 /**
  This enum represents the default font information for each character.

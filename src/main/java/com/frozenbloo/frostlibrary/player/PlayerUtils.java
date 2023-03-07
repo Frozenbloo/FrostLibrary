@@ -1,6 +1,6 @@
 package com.frozenbloo.frostlibrary.player;
 
-import com.frozenbloo.frostlibrary.string.colour.StringColour;
+import com.frozenbloo.frostlibrary.player.string.colour.StringColour;
 import org.bukkit.entity.Player;
 
 public class PlayerUtils {
