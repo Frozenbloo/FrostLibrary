@@ -1,10 +1,13 @@
 package com.frozenbloo.frostlibrary;
 
-import com.frozenbloo.frostlibrary.player.string.colour.StringColour;
+import com.frozenbloo.frostlibrary.menu.MenuListener;
+import com.frozenbloo.frostlibrary.string.colour.StringColour;
 import com.frozenbloo.frostlibrary.util.Internal;
 import lombok.Getter;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import static org.bukkit.Bukkit.getPluginManager;
 
 public final class FrostLibrary extends JavaPlugin {
 
@@ -37,5 +40,6 @@ public final class FrostLibrary extends JavaPlugin {
     public void onEnable() {
         instance = this;
         Bukkit.getConsoleSender().sendMessage(StringColour.HexColour(Internal.GetIceArt()));
+        getPluginManager().registerEvents(new MenuListener(), this);
     }
 }

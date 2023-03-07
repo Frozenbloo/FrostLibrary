@@ -1,6 +1,6 @@
 package com.frozenbloo.frostlibrary.util;
 
-import static com.frozenbloo.frostlibrary.player.string.colour.StringColour.HexColour;
+import static com.frozenbloo.frostlibrary.string.colour.StringColour.HexColour;
 
 public class Internal {
 

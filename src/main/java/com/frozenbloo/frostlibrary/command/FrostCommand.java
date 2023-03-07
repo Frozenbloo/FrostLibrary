@@ -10,7 +10,7 @@ import java.lang.reflect.Field;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.frozenbloo.frostlibrary.player.string.colour.StringColour.HexColour;
+import static com.frozenbloo.frostlibrary.string.colour.StringColour.HexColour;
 
 /**
  * A custom command class that extends the BukkitCommand class and provides some additional functionality.
