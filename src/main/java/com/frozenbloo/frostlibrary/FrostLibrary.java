@@ -1,7 +1,6 @@
 package com.frozenbloo.frostlibrary;
 
 import com.frozenbloo.frostlibrary.menu.MenuListener;
-import com.frozenbloo.frostlibrary.player.FrostPlayer;
 import com.frozenbloo.frostlibrary.player.frostplayer.FrostPlayerConnectionListener;
 import com.frozenbloo.frostlibrary.player.frostplayer.FrostPlayerManager;
 import com.frozenbloo.frostlibrary.string.colour.StringColour;
