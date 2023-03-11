@@ -5,6 +5,7 @@ import com.frozenbloo.frostlibrary.player.frostplayer.FrostPlayerConnectionListe
 import com.frozenbloo.frostlibrary.player.frostplayer.FrostPlayerManager;
 import com.frozenbloo.frostlibrary.string.colour.StringColour;
 import com.frozenbloo.frostlibrary.util.Internal;
+import com.frozenbloo.frostlibrary.util.InternalListeners;
 import lombok.Getter;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -45,6 +46,7 @@ public final class FrostLibrary extends JavaPlugin {
     @Override
     public void onEnable() {
         instance = this;
+        Internal.EnableMetrics();
         Bukkit.getLogger().info("Loading Floodgate API");
         try{
             FloodgateApi.getInstance();
@@ -57,5 +59,6 @@ public final class FrostLibrary extends JavaPlugin {
         Bukkit.getConsoleSender().sendMessage(StringColour.HexColour(Internal.GetIceArt()));
         getPluginManager().registerEvents(new FrostPlayerConnectionListener(), this);
         getPluginManager().registerEvents(new MenuListener(), this);
+        getPluginManager().registerEvents(new InternalListeners(), this);
     }
 }

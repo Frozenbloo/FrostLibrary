@@ -1,5 +1,7 @@
 package com.frozenbloo.frostlibrary.util;
 
+import com.frozenbloo.frostlibrary.FrostLibrary;
+
 import static com.frozenbloo.frostlibrary.string.colour.StringColour.HexColour;
 
 public class Internal {
@@ -30,5 +32,9 @@ public class Internal {
                 "                                                  \n" +
                 "                                                  \n" +
                 "                                                  \n");
+    }
+
+    public static void EnableMetrics(){
+        Metrics metrics = new Metrics(FrostLibrary.getInstance(), 17917);
     }
 }
