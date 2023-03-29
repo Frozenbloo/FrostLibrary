@@ -48,14 +48,15 @@ public final class FrostLibrary extends JavaPlugin {
         instance = this;
         Internal.EnableMetrics();
         Bukkit.getLogger().info("Loading Floodgate API");
-        try{
+        try {
             FloodgateApi.getInstance();
-        } catch(Exception ex){
+            frostPlayerManager = new FrostPlayerManager();
+            Bukkit.getLogger().info("Floodgate API Loaded Successfully");
+        } catch(Exception | NoClassDefFoundError ex){
             Bukkit.getLogger().severe(ex.getMessage());
             Bukkit.getLogger().severe("Floodgate API FAILURE!");
         }
-        Bukkit.getLogger().info("Floodgate API Loaded Successfully");
-        frostPlayerManager = new FrostPlayerManager();
+
         Bukkit.getConsoleSender().sendMessage(StringColour.HexColour(Internal.GetIceArt()));
         getPluginManager().registerEvents(new FrostPlayerConnectionListener(), this);
         getPluginManager().registerEvents(new MenuListener(), this);
